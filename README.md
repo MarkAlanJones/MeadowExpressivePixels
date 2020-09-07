@@ -31,3 +31,5 @@ Microsoft says they choose between I and P format depending on which one uses le
 * JSON needs to be stored as an "embedded resource" as meadow doesn't support loading files from the file system yet,
 
 * Microsoft System.Text.Json nuget is used to decode the JSON, as it runs on the meadow  
+
+![Expressive Pixels Logo](/ScreenShots/ExpressivePixelsSplash.png)
