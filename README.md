@@ -1,6 +1,6 @@
 # Meadow Expressive Pixels
 
-Display the Microsoft Expressive Pixels JSON format using the Meadow GraphicsLibrary on supported RGB displays.
+Display the Microsoft Expressive Pixels JSON format using the Meadow [GraphicsLibrary](https://github.com/WildernessLabs/Meadow.Foundation/tree/master/Source/Meadow.Foundation.Libraries_and_Frameworks/Displays.GraphicsLibrary) on supported RGB displays.
 
 [Expressive Pixels](http://aka.ms/expressivepixels) is a Windows 10 app - available from the Microsoft Store, for creating small animations (typically 8x8 to 64x64 pixels) for display (typically) on large pixel RGB displays. They seem particually interested in the round displays from [SiliconSquared](https://siliconsquared.com/sparkletallinone/).
 
