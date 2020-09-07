@@ -27,3 +27,7 @@ Microsoft says they choose between I and P format depending on which one uses le
 * When exporting to JSON you need to know how many pixels the animation was created for. The interface defaults to 16x16. You can experiment, but typically you want to match the size of the authored animation, and not take the default.
 
 * Since the emojis seem useful, I wanted to support a library of emojis where you would display any specific one, without the animation. **DrawFrame** is most effective if it can draw the I frame - but we do not have control of the encoding as I or P, so often multiple frames have to be rendered in the background to display the specific desired frame. This can be slower than desired.
+
+* JSON needs to be stored as an "embedded resource" as meadow doesn't support loading files from the file system yet,
+
+* Microsoft System.Text.Json nuget is used to decode the JSON, as it runs on the meadow  
