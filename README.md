@@ -29,7 +29,7 @@ Microsoft says they choose between I and P format depending on which one uses le
 
 * On Meadow the 240x240 st7789 display is huge, when you are displaying 16 pixels. So most animations will be displayed by zooming (the Display function takes a zoom parameter). This means 4 times the pixels for 2x, 16 times for 4x etc. The Meadow will have trouble keeping up with the frame rate if the animations are displayed at higher zooms.
 
-* Including the Emoji library means that Expressive Pixels is a a great vector to display full colour Emojis (much better than monochrome truetype files at lower resolutions). The Maximum size of 64x64 works great for circles, but emojis at 48x48 look good if not zoomed too much. 32x32 can also be effective (all 3 resolutions are demonstrated in the example code)
+* Including the Emoji library means that Expressive Pixels is a great vector to display full colour Emojis (much better than monochrome truetype files at lower resolutions). The Maximum size of 64x64 works great for circles, but emojis at 48x48 look good if not zoomed too much. 32x32 can also be effective (all 3 resolutions are demonstrated in the example code)
 
 * When exporting to JSON you need to know how many pixels the animation was created for. The interface defaults to 16x16. You can experiment, but typically you want to match the size of the authored animation, and not take the default.
 
