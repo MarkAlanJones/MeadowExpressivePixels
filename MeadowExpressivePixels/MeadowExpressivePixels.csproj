@@ -1,0 +1,33 @@
+﻿<Project Sdk="Meadow.Sdk/1.1.0">
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>App</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="BigEmoji16.json" />
+    <None Remove="EpressivePixelsTinyLogo.json" />
+    <None Remove="FishTank.json" />
+    <None Remove="Heart8x8.json" />
+    <None Remove="HeartBeat.json" />
+    <None Remove="MoonPhase64.json" />
+    <None Remove="RainbowHeartbeats.json" />
+    <None Remove="RocketJourney.json" />
+    <None Remove="WeatherEmojis.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Meadow.Foundation.Displays.TftSpi" Version="0.7.10" />
+    <PackageReference Include="System.Text.Json" Version="4.7.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="JSON\BigEmoji16.json" />
+    <EmbeddedResource Include="JSON\EpressivePixelsTinyLogo.json" />
+    <EmbeddedResource Include="JSON\FishTank.json" />
+    <EmbeddedResource Include="JSON\Heart8x8.json" />
+    <EmbeddedResource Include="JSON\HeartBeat.json" />
+    <EmbeddedResource Include="JSON\MoonPhase64.json" />
+    <EmbeddedResource Include="JSON\RainbowHeartbeats.json" />
+    <EmbeddedResource Include="JSON\RocketJourney.json" />
+    <EmbeddedResource Include="JSON\WeatherEmojis.json" />
+  </ItemGroup>
+</Project>
