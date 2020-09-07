@@ -4,7 +4,7 @@ Display the Microsoft Expressive Pixels JSON format using the [Meadow](https://s
 
 [Expressive Pixels](http://aka.ms/expressivepixels) is a Windows 10 app - available from the Microsoft Store, for creating small animations (typically 8x8 to 64x64 pixels) for display (typically) on large pixel RGB displays. They seem particually interested in the round displays from [SiliconSquared](https://siliconsquared.com/sparkletallinone/).
 
-It is also an open source project on [Github](https://github.com/microsoft/ExpressivePixels). The key peice of information on the format is in the [Wiki](https://github.com/microsoft/ExpressivePixels/wiki/Animation-Format).
+It is also an open source project on [Github](https://github.com/microsoft/ExpressivePixels). The key piece of information on the format is in the [Wiki](https://github.com/microsoft/ExpressivePixels/wiki/Animation-Format).
 
 In summary, the format contains an RGB pallette of colours, stored as packed Hexidecimal strings, as well as the frames (also stored a one big packed hexidecimal string). 
 
