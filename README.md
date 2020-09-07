@@ -16,6 +16,11 @@ Each frame can be one of 4 types:
 
 Microsoft says they choose between I and P format depending on which one uses less space.
 
+## Example Output
+
+![1](/ScreenShots/EP1.png) | ![2](/ScreenShots/EP2.png)| ![3](/ScreenShots/EP3.png)| ![4](/ScreenShots/EP4.png)
+8x8 Hearts and logo | Samples | Emojis | 1 Frame zoomed
+
 ## Implementation Notes
 
 * Expressive Pixels is a accessible application, attempting to simplify animations on small devices, but it is hard to draw a good animation by hand. This can be seen in the low quality of many examples in the default and community examples. 
