@@ -21,7 +21,7 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="JSON\BigEmoji16.json" />
-    <EmbeddedResource Include="JSON\EpressivePixelsTinyLogo.json" />
+    <EmbeddedResource Include="JSON\ExpressivePixelsTinyLogo.json" />
     <EmbeddedResource Include="JSON\FishTank.json" />
     <EmbeddedResource Include="JSON\Heart8x8.json" />
     <EmbeddedResource Include="JSON\HeartBeat.json" />

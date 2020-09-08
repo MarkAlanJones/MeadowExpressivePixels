@@ -26,7 +26,7 @@ namespace MeadowExpressivePixels
             expix.Display(40, 40, 2);
             expix.Display(60, 60, 2);
             expix.Display(80, 80, 2);
-            expix.Load("EpressivePixelsTinyLogo.json");
+            expix.Load("ExpressivePixelsTinyLogo.json");
             expix.Display(110, 110, 2);
 
             Thread.Sleep(1000);
