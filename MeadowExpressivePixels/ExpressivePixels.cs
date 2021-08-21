@@ -7,8 +7,6 @@ using System.Globalization;
 using System.IO;
 using System.Reflection;
 using System.Threading;
-using System.Text.Json;  // <-- Newtonsoft would not initialize on the meadow.
-
 
 /// <summary>
 /// Display the JSON representation of Microsoft Expressive Pixels using the Meadow GraphicsLibrary
@@ -127,7 +125,7 @@ namespace Microsoft.ExpressivePixels
             using (StreamReader reader = new StreamReader(stream))
             {
                 string jsonFile = reader.ReadToEnd();
-                Data = JsonSerializer.Deserialize<ExpressivePixelsJSON>(jsonFile);
+                Data = LitJson.JsonMapper.ToObject<ExpressivePixelsJSON>(jsonFile);
 
                 Console.WriteLine($"Success {Data.Name} - Loop {Data.LoopCount} Times : {Data.PaletteSize} Colours : {Data.FrameCount} Frames ");
                 Console.WriteLine($"JSON Decode took {LoadTimer.ElapsedMilliseconds}ms");
