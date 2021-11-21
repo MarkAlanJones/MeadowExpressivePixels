@@ -84,10 +84,11 @@ namespace MeadowExpressivePixels
                 resetPin: Device.Pins.D00,
                 width: displayWidth, height: displayHeight);
 
-            graphics = new GraphicsLibrary(display);
-
-            graphics.Rotation = GraphicsLibrary.RotationType._270Degrees;
-            graphics.Stroke = 1;
+            graphics = new GraphicsLibrary(display)
+            {
+                Rotation = RotationType._270Degrees,
+                Stroke = 1
+            };
             graphics.Clear(true);
         }
     }
