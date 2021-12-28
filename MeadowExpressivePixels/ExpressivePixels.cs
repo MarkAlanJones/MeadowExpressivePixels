@@ -75,8 +75,8 @@ namespace Microsoft.ExpressivePixels
         private List<FrameDef> Frames { get; set; }
         public List<DecodedFrameDef> DFrames { get; set; }
 
-        // This library uses the Meadow GraphicsLibrary to render
-        private GraphicsLibrary graphics;
+        // This library uses the Meadow MicroGraphics Library to render
+        private MicroGraphics graphics;
         
         private Stopwatch FrameTimer;
 
@@ -86,13 +86,13 @@ namespace Microsoft.ExpressivePixels
 
         #endregion
 
-        public ExpressivePixels(string resource, GraphicsLibrary g)
+        public ExpressivePixels(string resource, MicroGraphics g)
         {
             graphics = g;
             Load(resource);
         }
 
-        public ExpressivePixels(GraphicsLibrary g)
+        public ExpressivePixels(MicroGraphics g)
         {
             graphics = g;
             //default ?
