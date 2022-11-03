@@ -1,15 +1,16 @@
 ﻿using Meadow;
 using Meadow.Devices;
-using Meadow.Foundation.Displays.TftSpi;
+using Meadow.Foundation.Displays;
 using Meadow.Foundation.Graphics;
 using Meadow.Hardware;
 using Microsoft.ExpressivePixels;
 using System;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace MeadowExpressivePixels
 {
-    public class MeadowApp : App<F7FeatherV1, MeadowApp>
+    public class MeadowApp : App<F7FeatherV1>
     {
         St7789 display;
         MicroGraphics graphics;
@@ -69,7 +70,7 @@ namespace MeadowExpressivePixels
             Console.WriteLine("Done");
         }
 
-        void Initialize()
+        public override Task Initialize()
         {
             Console.WriteLine("Initializing...");
 
@@ -90,6 +91,7 @@ namespace MeadowExpressivePixels
                 Stroke = 1
             };
             graphics.Clear(true);
+            return base.Initialize();
         }
     }
 }
