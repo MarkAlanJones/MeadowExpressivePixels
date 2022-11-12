@@ -33,4 +33,9 @@
     <EmbeddedResource Include="JSON\RocketJourney.json" />
     <EmbeddedResource Include="JSON\WeatherEmojis.json" />
   </ItemGroup>
+  <ItemGroup>
+    <None Update="meadow.config.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>
