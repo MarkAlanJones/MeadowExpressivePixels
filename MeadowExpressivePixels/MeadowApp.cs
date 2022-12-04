@@ -17,10 +17,8 @@ namespace MeadowExpressivePixels
         const int displayWidth = 240;
         const int displayHeight = 240;
 
-        public MeadowApp()
-        {
-            Initialize();
-
+        public override Task Run()
+        {       
             // Show the small heart 4 times - zoom 2 = 16x16
             ExpressivePixels expix = new ExpressivePixels("Heart8x8.json", graphics);
             expix.Display(20, 20, 2);
@@ -68,6 +66,8 @@ namespace MeadowExpressivePixels
             expix.DisplayFrame(7, 20, 20, 4);
 
             Console.WriteLine("Done");
+
+            return base.Run();
         }
 
         public override Task Initialize()
