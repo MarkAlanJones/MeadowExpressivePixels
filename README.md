@@ -35,7 +35,7 @@ Microsoft says they choose between I and P format depending on which one uses le
 
 * Since the emojis seem useful, I wanted to support a library of emojis where you would display any specific one, without the animation. **DrawFrame** is most effective if it can draw the I frame - but we do not have control of the encoding as I or P, so often multiple frames have to be rendered in the background to display the specific desired frame. This can be slower than desired.
 
-* JSON needs to be stored as an "embedded resource" as Meadow doesn't support loading files from the file system yet.
+* JSON needs to be stored as an "embedded resource". It should be possible to load as a file as well.
 
 * Microsoft System.Text.Json nuget is used to decode the JSON, as it runs on the Meadow  
 
