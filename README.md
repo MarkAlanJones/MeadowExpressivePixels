@@ -10,7 +10,7 @@ In summary, the format contains an RGB pallette of colours, stored as packed Hex
 
 Each frame can be one of 4 types:
 1. **I** - contains all the pixels in a frame - as a packed list of hexidecimal palette entries. The dimensions can be determined by taking the square root of the number of pixels. The explicit dimensions of the animation are not stored in the JSON directly.
-2. **P** - contains specific pixels to change from the previous frame. The pixel location can be stored as 8bit for small dimensions - Row and Coloumn each 4 bits fits into a byte, strored as a hexidecimal string (2 characters). For larger images the encoding is 16 bits, and stores it in long rows of 256 pixels. So you must know the dimensions of the animation - hopefully you had an I frame first. The library assumes 18x18 if not. If there are no I frames you can specify the Width and Height after loading.
+2. **P** - contains specific pixels to change from the previous frame. The pixel location can be stored as 8bit for small dimensions - Row and Column each 4 bits fits into a byte, strored as a hexidecimal string (2 characters). For larger images the encoding is 16 bits, and stores it in long rows of 256 pixels. So you must know the dimensions of the animation - hopefully you had an I frame first. The library assumes 18x18 if not. If there are no I frames you can specify the Width and Height after loading.
 3. **D** - Delay in ms - just wait before going to the next frame.
 4. **F** - Fade in ms - I don't know how to fade a portion of the display - Presumably on some of the devices, the entire display shows the image, and can be faded in hardware. In this library it is treated as a delay for now.
 
@@ -35,7 +35,7 @@ Microsoft says they choose between I and P format depending on which one uses le
 
 * Since the emojis seem useful, I wanted to support a library of emojis where you would display any specific one, without the animation. **DrawFrame** is most effective if it can draw the I frame - but we do not have control of the encoding as I or P, so often multiple frames have to be rendered in the background to display the specific desired frame. This can be slower than desired.
 
-* JSON needs to be stored as an "embedded resource" as Meadow doesn't support loading files from the file system yet.
+* JSON needs to be stored as an "embedded resource". It should be possible to load as a file as well.
 
 * Microsoft System.Text.Json nuget is used to decode the JSON, as it runs on the Meadow  
 
