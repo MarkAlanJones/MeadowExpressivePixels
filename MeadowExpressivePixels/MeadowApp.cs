@@ -78,7 +78,6 @@ namespace MeadowExpressivePixels
             var spiBus = Device.CreateSpiBus(Device.Pins.SCK, Device.Pins.MOSI, Device.Pins.MISO, config);
 
             display = new St7789(
-                device: Device,
                 spiBus: spiBus,
                 chipSelectPin: null,
                 dcPin: Device.Pins.D01,
@@ -87,7 +86,7 @@ namespace MeadowExpressivePixels
 
             graphics = new MicroGraphics(display)
             {
-                Rotation = RotationType._270Degrees,
+                Rotation = RotationType._90Degrees,
                 Stroke = 1
             };
             graphics.Clear(true);

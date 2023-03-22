@@ -18,9 +18,9 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="LitJson" Version="0.18.0" />
-    <PackageReference Include="Meadow.F7" Version="0.92.5" />
-    <PackageReference Include="Meadow.Foundation" Version="0.92.5" />
-    <PackageReference Include="Meadow.Foundation.Displays.TftSpi" Version="0.92.5" />
+    <PackageReference Include="Meadow.F7" Version="0.95.1" />
+    <PackageReference Include="Meadow.Foundation" Version="0.95.0" />
+    <PackageReference Include="Meadow.Foundation.Displays.TftSpi" Version="0.95.0" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="JSON\BigEmoji16.json" />
