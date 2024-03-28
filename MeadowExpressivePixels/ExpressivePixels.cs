@@ -76,7 +76,7 @@ namespace Microsoft.ExpressivePixels
         public List<DecodedFrameDef> DFrames { get; set; }
 
         // This library uses the Meadow MicroGraphics Library to render
-        private MicroGraphics graphics;
+        private readonly MicroGraphics graphics;
         
         private Stopwatch FrameTimer;
 
@@ -121,21 +121,20 @@ namespace Microsoft.ExpressivePixels
             Width = 18;
             Height = 18;
 
-            using (Stream stream = assembly.GetManifestResourceStream(resourceName))
-            using (StreamReader reader = new StreamReader(stream))
-            {
-                string jsonFile = reader.ReadToEnd();
-                Data = LitJson.JsonMapper.ToObject<ExpressivePixelsJSON>(jsonFile);
+            using Stream stream = assembly.GetManifestResourceStream(resourceName);
+            using StreamReader reader = new StreamReader(stream);
 
-                Console.WriteLine($"Success {Data.Name} - Loop {Data.LoopCount} Times : {Data.PaletteSize} Colours : {Data.FrameCount} Frames ");
-                Console.WriteLine($"JSON Decode took {LoadTimer.ElapsedMilliseconds}ms");
+            string jsonFile = reader.ReadToEnd();
+            Data = LitJson.JsonMapper.ToObject<ExpressivePixelsJSON>(jsonFile);
 
-                LoadPalette();
-                LoadFrames();
+            Console.WriteLine($"Success {Data.Name} - Loop {Data.LoopCount} Times : {Data.PaletteSize} Colours : {Data.FrameCount} Frames ");
+            Console.WriteLine($"JSON Decode took {LoadTimer.ElapsedMilliseconds}ms");
 
-                LoadTimer.Stop();
-                Console.WriteLine($"Total Load time - {LoadTimer.ElapsedMilliseconds}ms");
-            }
+            LoadPalette();
+            LoadFrames();
+
+            LoadTimer.Stop();
+            Console.WriteLine($"Total Load time - {LoadTimer.ElapsedMilliseconds}ms");
         }
 
         private void LoadPalette()
@@ -413,8 +412,8 @@ namespace Microsoft.ExpressivePixels
         /// </summary>
         private void Display(PFrameDef pfd, ushort xPos, ushort yPos, ushort zoom)
         {
-            int x = xPos;
-            int y = yPos;
+            int x;
+            int y;
             foreach (var p in pfd.Pix)
             {
                 if (zoom == 1)
