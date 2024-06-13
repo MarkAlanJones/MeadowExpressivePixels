@@ -37,6 +37,7 @@ Microsoft says they choose between I and P format depending on which one uses le
 
 * JSON needs to be stored as an "embedded resource". It should be possible to load as a file as well.
 
-* Microsoft System.Text.Json nuget is used to decode the JSON, as it runs on the Meadow  
+* Microsoft *System.Text.Json* nuget was used originally to decode the JSON, but it stopped working. So it was swapped for *LitJson*, which worked fine, but 
+now meadow ships with a built in *MicroJson* so the latest version uses that, to reduce the footprint  
 
 ![Expressive Pixels Logo](/ScreenShots/ExpressivePixelsSplash.png)
