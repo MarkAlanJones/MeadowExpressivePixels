@@ -7,6 +7,7 @@ using System.Globalization;
 using System.IO;
 using System.Reflection;
 using System.Threading;
+using Meadow.Foundation.Serialization;
 
 /// <summary>
 /// Display the JSON representation of Microsoft Expressive Pixels using the Meadow GraphicsLibrary
@@ -125,7 +126,7 @@ namespace Microsoft.ExpressivePixels
             using StreamReader reader = new StreamReader(stream);
 
             string jsonFile = reader.ReadToEnd();
-            Data = LitJson.JsonMapper.ToObject<ExpressivePixelsJSON>(jsonFile);
+            Data = MicroJson.Deserialize<ExpressivePixelsJSON>(jsonFile);
 
             Console.WriteLine($"Success {Data.Name} - Loop {Data.LoopCount} Times : {Data.PaletteSize} Colours : {Data.FrameCount} Frames ");
             Console.WriteLine($"JSON Decode took {LoadTimer.ElapsedMilliseconds}ms");
